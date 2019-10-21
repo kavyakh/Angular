@@ -1,0 +1,9 @@
+<p>datepicker-test works!</p>
+<ngb-datepicker (select)="onSelect($event)"></ngb-datepicker><!--Calender willl be displayed-->
+<p>{{date|json}}</p>
+
+<div *ngIf="date">
+<p>{{date.day}}</p>
+<p>{{date.month}}</p>
+<p>{{date.year}}</p>
+</div>

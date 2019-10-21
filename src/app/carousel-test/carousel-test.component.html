@@ -1,0 +1,36 @@
+<p>carousel-test works!</p>
+
+<div class="container-fluid" style="width: fit-content;">
+<ngb-carousel *ngIf="images">
+    <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+           <!-- <img [src]="images[0]" alt="Random first slide">-->
+            <img src="../../assets/images/1mg2.jfif" alt="Random first slide" width="100%" height="100%">
+        </div>
+        <div class="carousel-caption">
+            <h3>First slide label</h3>
+            <p>This is first image</p>
+        </div>
+    </ng-template>
+
+    <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+                <img src="../../assets/images/img1.jfif" alt="Random first slide" width="100%" height="100%">
+            </div>
+            <div class="carousel-caption">
+                <h3>Second slide label</h3>
+                <p>This is first image</p>
+            </div>
+        </ng-template>
+
+        <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img src="../../assets/images/img3.jfif" alt="Random first slide" width="100%" height="100%">
+                </div>
+                <div class="carousel-caption">
+                    <h3>Third slide label</h3>
+                    <p>This is first image</p>
+                </div>
+            </ng-template>
+</ngb-carousel>
+</div>

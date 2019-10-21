@@ -1,0 +1,18 @@
+<h3 class="text-color  text-bg">{{message}}</h3>
+<h2 [class]="textColor" [class]="textBg">{{message}}</h2>
+<h2 [ngClass]="['text-color','text-bg']">{{message}}</h2>
+<h2 [ngClass]="[textColor,textBkColor]">{{message}}</h2>
+<h2 [ngClass]="greetingStyle">{{message}}</h2>
+<h2 [ngStyle] = "{'color':'red','background-color':'blue'}">{{message}}</h2>
+<h1 [ngStyle]= "{'color':getFgcolor(),'background-color':getBgcolor()}">Happy Diwali</h1>
+<button class="btn btn-Secondary"(click)="toggleColor()">Toggle</button>
+<button (click)="sayGreet($event)">Greet</button>
+<h3 class="text-color  text-bg">{{message|uppercase}}</h3><!--pipes are used to formata data-->
+<h3 class="text-color  text-bg">{{message|lowercase}}</h3>
+<h3 class="text-color  text-bg">{{message|titlecase}}</h3>
+<h2 appColor>{{message}}</h2>
+
+
+
+
+

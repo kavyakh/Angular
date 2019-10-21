@@ -1,0 +1,53 @@
+<p>product-form works!</p>
+<div class="container-fluid">
+    <form #productForm="ngForm" class="was-validated" (ngSubmit)="onsubmit">
+        <p>ValidForm: {{productForm.form.valid}}</p>
+        <p>{{productForm.value|json}}</p>
+        <div class="form-group">
+         <label>Product Id</label>
+         <input #id="ngModel" name="productId" type="number" class="form-control"   [(ngModel)]="product.productId" required pattern="^\d{4}$">
+         <div *ngIf="id.errors && (id.invalid || id.dirty)">
+            <small *ngIf="id.errors.required" class=text-danger>ProductId is required</small>
+            <small *ngIf="id.errors.pattern" class=text-danger>ProductId must be four digits</small>
+            </div>
+       
+        </div>
+
+        <div class="form-group">
+                <label>Name</label>
+                <input #nm="ngModel" name="name" type="text" class="form-control"   [(ngModel)]="product.name" required>
+                <div class="valid-feedback">valid</div> 
+                <div class="invalid-feedback">Please fill  this field</div>
+                <p>{{nm.className}}</p> 
+                <p>Touched: {{nm.touched}}</p>
+                <p>Prsistine: {{nm.prsistine}}</p>
+                <p>Valid: {{nm.valid}}</p>
+                <div *ngIf="nm.errors&&nm.invalid">
+                    <small *ngIf="nm.errors.required" class=text-danger>nm is required</small>
+                </div>
+               </div>
+
+               <div class="form-group">
+                    <label>Brand</label>
+                    <input #brnd="ngModel" name="brand" type="text" class="form-control"   [(ngModel)]="product.brand" required>
+                                       
+                    <div *ngIf="brnd.errors&&brnd.invalid">
+                            <small *ngIf="brnd.errors.required" class=text-danger>specify the brand</small>
+                        </div>
+                   </div>
+
+                   <div class="form-group">
+                        <label>Price</label>
+                        <input #prz="ngModel" name="price" type="number" class="form-control" [(ngModel)]="product.price" 
+                        required pattern="^\d{6}$">
+                        <div *ngIf="prz.errors && (prz.invalid || prz.dirty)">
+                   
+                                <small *ngIf="prz.errors.required" class=text-danger>specify the Prize</small>
+                                <small *ngIf="prz.errors.pattern" class=text-danger>Prize must be six digits </small>
+                            </div>
+                       </div>
+                    
+        <button type="submit" [disabled]="productForm.form.invalid" class="btn btn-primary" >Submit</button>
+             
+    </form>
+
