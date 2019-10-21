@@ -3,54 +3,54 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GreetingComponent } from './greeting/greeting.component';
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { ProductListComponent } from './product-list/product-list.component';
-import { FormsModule} from '@angular/forms';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { from } from 'rxjs';
-import { ProductNotifyComponent } from './product-notify/product-notify.component';
-import { PipeTestComponent } from './pipe-test/pipe-test.component';
-import { DatepickerTestComponent } from './datepicker-test/datepicker-test.component';
-import { TimepickerTestComponent } from './timepicker-test/timepicker-test.component';
-import { RatingTestComponent } from './rating-test/rating-test.component';
-import { SwitchTestComponent } from './switch-test/switch-test.component';
-import { RverseStringPipe } from './rverse-string.pipe';
-import { CarouselTestComponent } from './carousel-test/carousel-test.component';
-import { ProductFormComponent } from './product-form/product-form.component';
-import {HttpClientModule} from '@angular/common/http';
-import { ProductService } from './product.service';
-import { HFComponent } from './h-f/h-f.component';
-import { ColorDirective } from './color.directive';
 
+import { LogoutComponent } from './logout/logout.component';
+import { HomeComponent } from './home/home.component';
+import { SignupComponent } from './signup/signup.component';
+import { ScheduleComponent } from './schedule/schedule.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { PaymentComponent } from './payment/payment.component';
+import { BookingComponent } from './booking/booking.component';
+import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
+import { TicketComponent } from './ticket/ticket.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { EditPaymentComponent } from './edit-payment/edit-payment.component';
+import { UpdateFlightComponent } from './update-flight/update-flight.component';
+import { AddFlightComponent } from './add-flight/add-flight.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GreetingComponent,
+    LoginComponent,
+    HeaderComponent,
     FooterComponent,
-    ProductListComponent,
-    ProductNotifyComponent,
-    PipeTestComponent,
-    DatepickerTestComponent,
-    TimepickerTestComponent,
-    RatingTestComponent,
-    SwitchTestComponent,
-    RverseStringPipe,
-    CarouselTestComponent,
-    ProductFormComponent,
-    HFComponent,
-    ColorDirective
+    LoginComponent,
+    LogoutComponent,
+    HomeComponent,
+    SignupComponent,
+    ScheduleComponent,
+    AboutusComponent,
+    ContactusComponent,
+    PaymentComponent,
+    BookingComponent,
+    ResetpasswordComponent,
+    TicketComponent,
+    EditProfileComponent,
+    EditPaymentComponent,
+    UpdateFlightComponent,
+    AddFlightComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    NgbModule,
-    HttpClientModule
+    FormsModule
   ],
-  providers: [ProductService ],
+  providers: [],
   bootstrap: [AppComponent]
- 
 })
 export class AppModule { }

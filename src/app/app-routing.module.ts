@@ -1,32 +1,40 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { GreetingComponent } from './greeting/greeting.component';
-import { ProductListComponent } from './product-list/product-list.component';
-import { DatepickerTestComponent } from './datepicker-test/datepicker-test.component';
-import { TimepickerTestComponent } from './timepicker-test/timepicker-test.component';
-import { RatingTestComponent } from './rating-test/rating-test.component';
-import { SwitchTestComponent } from './switch-test/switch-test.component';
-import { PipeTestComponent } from './pipe-test/pipe-test.component';
-import { CarouselTestComponent } from './carousel-test/carousel-test.component';
-import { ProductFormComponent } from './product-form/product-form.component';
+import { HomeComponent } from './home/home.component';
 
+import { ScheduleComponent } from './schedule/schedule.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 const routes: Routes = [
-
-  {path:'greet',component:GreetingComponent},
-  {path:'product',component:ProductListComponent},
-  {path:'datepicker-test',component:DatepickerTestComponent},
-  {path:'timepicker-test',component:TimepickerTestComponent},
-  {path:'rating-test',component:RatingTestComponent},
-  {path:'switch-test',component:SwitchTestComponent},
-  {path:'pipe-test',component:PipeTestComponent},
-  {path:'carousel-test',component:CarouselTestComponent},
-  {path:'product-form',component:ProductFormComponent},
-  {path:'',redirectTo:'/greet',pathMatch:'full'},
-  {path:'**',redirectTo:'/greet',pathMatch:'full'}
- 
-
+  {
+    path:'home',
+    component:HomeComponent
+  },
+  {
+    path:'aboutus',
+    component:AboutusComponent
+  },
+  {
+    path:'schedule',
+    component:ScheduleComponent
+  },
+  {
+    path:'contactus',
+    component:ContactusComponent
+  },
+  {
+    path:'login',
+    component:LoginComponent
+  },
+  {
+    path:'signup',
+    component:SignupComponent
+  }
+  
 ];
 
 @NgModule({
